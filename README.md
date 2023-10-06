@@ -146,3 +146,31 @@ For white robot face:
   ]
 }
 ```
+
+For blue robot face:
+```
+{
+  "softwareModules": [
+    {
+      "softwareModule": {
+        "name": "robot-face-update",
+        "version": "1.0.0"
+      },
+      "artifacts": [
+        {
+          "checksums": {
+            "SHA256": "277c3d6edc1e07685fb6458ed1be975204a136ccda4185d0635d871990a2a24d"
+          },
+          "download": {
+            "HTTPS": {
+              "url": "https://git.ostc-eu.org/francesco.pham/eclipsecon-demo/-/raw/main/robot_face_update_blue.sh"
+            }
+          },
+          "filename": "install.sh",
+          "size": 180
+        }
+      ]
+    }
+  ]
+}
+```
