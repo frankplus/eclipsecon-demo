@@ -18,6 +18,21 @@ IMAGE_INSTALL:append = " \
 "
 ```
 
+Add provisioning.json file in `meta-kanto/recipes-connectivity/suite-connector/files/`
+and include it in the SRC_URI
+```
+--- a/recipes-connectivity/suite-connector/suite-connector_git.bb
++++ b/recipes-connectivity/suite-connector/suite-connector_git.bb
+@@ -6,6 +6,7 @@ LIC_FILES_CHKSUM = "file://src/${GO_IMPORT}/LICENSE;md5=54cd967551e55d39f55006d3
+ SRC_URI = "git://github.com/eclipse-kanto/suite-connector;protocol=https;branch=main \
+            file://config.json \
+            file://service.template \
++           file://provisioning.json \
+            "
+ 
+ SRCREV = "${AUTOREV}"
+```
+
 ### Note
 The file system needs to be read-write:
 - in the local.conf set `ROOT_FSTYPE = "ext4"`
